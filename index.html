@@ -27,14 +27,13 @@
         </div>
 
     <div id="leftNav">
-        <button class="alarmClock Btn" type="button">
+        <button class="alarmClock Btn" type="button" onclick="loadPage('alarmClock.html')">
             <label class="iconLabel">Alarm Clock</label> 
             <a href="alarmClock.html" target="iframe_html"></a>
         </button>
-
-        <button class="timer Btn" type="button" >
+        <button class="timer Btn" type="button" onclick="loadPage('timer.html')">
             <label class="iconLabel">Timer</label> 
-            <a href="timer.html" target="iframe_html"></a>
+            <!-- <a href="timer.html" target="iframe_html"></a> -->
         </button>
         <button class="stopWatch Btn" type="button">
             <label class="iconLabel">Stop Watch</label> 
@@ -47,4 +46,9 @@
     </div>
 
     <iframe src="alarmClock.html" name="iframe_html" id="iFrame"></iframe>
+    <script>
+        function loadPage(page){
+            document.getElementById('iFrame').src = page;
+        }
+    </script>
 </body>
