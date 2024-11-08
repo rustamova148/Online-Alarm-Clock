@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <script src="script.js"></script>
-</body>
+<html>
+    <head>
+        <title>Time:</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
 </html>
+
+<body>
+    <div id="topNav">
+        <div id="logo"></div>
+            <button class="settings navBtn">
+            Settings
+            </button>
+            
+            <button class="nightMode navBtn">
+            NightMode
+            </button>
+
+            <button class="tools navBtn">
+            Tools
+            </button>
+
+            <button class="holidays navBtn">
+            Holidays
+            </button> 
+        </div>
+
+    <div id="leftNav">
+        <button class="alarmClock Btn" type="button">
+            <label class="iconLabel">Alarm Clock</label> 
+            <a href="alarmClock.html" target="iframe_html"></a>
+        </button>
+
+        <button class="timer Btn" type="button" >
+            <label class="iconLabel">Timer</label> 
+            <a href="timer.html" target="iframe_html"></a>
+        </button>
+        <button class="stopWatch Btn" type="button">
+            <label class="iconLabel">Stop Watch</label> 
+            <a href="stopWatch.html" target="iframe_html"></a>
+        </button>
+        <button class="time Btn" type="button">
+            <label class="iconLabel">Time</label> 
+            <a href="time.html" target="iframe_html"></a>
+        </button>
+    </div>
+
+    <iframe src="alarmClock.html" name="iframe_html" id="iFrame"></iframe>
+</body>

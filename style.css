@@ -1,5 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*
+{
+    margin: 0px;
 }
+
+@keyframes fadeBtn 
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}   
+}
+
+body
+{
+    background-color:aliceblue;
+}
+
+#iFrame
+{
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    height: 90.5vh;
+    width: 94.5%;
+    background-color: antiquewhite;
+}
+
+#topNav
+{
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: #0090dd;
+}
+
+#logo
+{
+    float: left;
+    margin-left: 20px;
+    width: 200px;
+    height: 100%;
+    background-image: url(icons/logoBlack.png);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#logo:hover
+{
+    transform: scale(1.2);
+    background-image: url(icons/logoWhite.png);
+}
+
+.navBtn
+{
+    float: right;
+    height: 100%;
+    margin-right: 20px;
+    font-size: 15px;
+    color: white;
+    background-color: #0090dd;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+#leftNav
+{
+    left:0px;
+    height:91.2vh;
+    width: 100px;
+    background-color:#3d3c3c;
+}
+
+.Btn
+{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: #3d3c3c;
+    background-size: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-width: 1px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.alarmClock
+{
+    background-image: url(icons/alarmClockWhite.png);
+}
+
+.alarmClock:hover
+{
+    background-image: url(icons/alarmClockBlack.png);
+}
+
+.timer
+{
+    
+    background-image: url(icons/timerIconWhite.png);
+}
+
+.timer:hover
+{
+    background-image: url(icons/timerIconBlack.png);
+}
+
+.stopWatch
+{
+    background-position-y:10px;
+    background-size: 60% 60%;
+    background-image: url(icons/stopWatchWhite.png);
+}
+
+.stopWatch:hover
+{
+    background-image: url(icons/stopWatchBlack.png);
+}
+
+
+.time
+{   
+    background-position-y:17px;
+    background-size: 40% 40%;
+    background-image: url(icons/timeIconWhite.png);
+}
+
+.time:hover
+{
+    background-image: url(icons/timeIconBlack.png);
+}
+
+
+.iconLabel
+{
+   font-size: 15px;
+   color: white;
+   font-weight: 500;
+   margin-top: 70px;
+   align-items: center;
+}
+
+.Btn:hover
+{
+    background-color: #dfdfdf;
+    animation: fadeBtn ease-out 1s;
+}
+
+
+
