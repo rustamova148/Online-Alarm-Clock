@@ -5,5 +5,47 @@
 
 body
 {
-    background-color: antiquewhite;
+    background-color: white;
+}
+
+#background
+{
+    margin: 20px;
+    background-color: white;
+    box-shadow: -2px 4px 29px 12px rgba(0,0,0,0.51);
+    border-radius: 20px;
+    width: 98%;
+    height: 75vh;
+}
+
+.label
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#time
+{
+    padding-top: 12%;
+    font-size: 150px;
+    font-weight: bolder;
+}
+
+#calendar
+{
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+#setAlarmBtn
+{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 45%;
+    margin-top: 40px;
+    background-color: greenyellow;
 }
