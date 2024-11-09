@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stopWatch.css">
+</head>
+</html>
+<body>
+    <div class="stopwatch-box">
+        <p>
+            <span id="minutes" style="font-size: 120px">00</span><span style="font-size: 120px">:</span><span id="seconds" style="font-size: 120px">00</span><span style="font-size: 60px">.</span><span id="tens" style="font-size: 60px">00</span>
+        </p>
+        <div class="sw-buttons">
+           <button id="start-btn">Start</button>
+           <button id="stop-btn">Stop</button>
+           <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+<script>
+    window.onload = function(){
+    let minutes = 0;
+    let seconds = 0;
+    let tens = 0;
+    let appendMinutes = document.getElementById('minutes');
+    let appendSeconds = document.getElementById('seconds');
+    let appendTens = document.getElementById('tens');
+    let startBtn = document.getElementById('start-btn');
+    let stopBtn = document.getElementById('stop-btn');
+    let resetBtn = document.getElementById('reset-btn');
+    let Interval;
+
+    startBtn.onclick = function(){
+        clearInterval(Interval);
+        Interval = setInterval(startTimer,10);
+    }
+
+    stopBtn.onclick = function(){
+        clearInterval(Interval);
+    }
+
+    resetBtn.onclick = function(){
+        clearInterval(Interval);
+        minutes = 0;
+        tens = 0;
+        seconds = 0;
+        appendMinutes.innerHTML = "00";
+        appendSeconds.innerHTML = "00";
+        appendTens.innerHTML = "00"
+    }
+
+    function startTimer(){
+       tens++;
+       if(tens<=9){
+        appendTens.innerHTML = "0" + tens;
+       }
+       if(tens>9){
+        appendTens.innerHTML = tens;
+       }
+       if(tens>99){
+        seconds++;
+        appendSeconds.innerHTML = "0" + seconds;
+        tens = 0;
+        appendTens.innerHTML = "0" + tens;
+       }
+       if(seconds>9){
+        appendSeconds.innerHTML = seconds;
+       }
+       if(seconds>=60){
+        minutes++;
+        appendMinutes.innerHTML = "0" + minutes;
+        seconds = 0;
+        appendSeconds.innerHTML = "0" + seconds;
+       }
+       if(minutes>9){
+        appendMinutes.innerHTML = minutes;
+       }
+    }
+
+    }
+</script>
+</body>
