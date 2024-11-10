@@ -5,8 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    timer
+    <div class="timer-box">
+        <p>
+            <i class="fa-solid fa-arrow-up-long up" style="display: none;"></i>
+            <span id="t-minutes">00</span>:<span id="t-seconds">00</span>
+        </p>
+        <div class="timer-btns">
+            <button id="set-countdown">Edit Timer</button>
+            <button id="t-reset">Reset</button>
+            <button id="t-start">Start</button>
+            <button id="t-stop">Stop</button>
+        </div>
+    </div>
+    <script>
+       window.onload = function(){
+        let minutes = 0;
+        let seconds = 0;
+        let appendMinutes = document.getElementById('t-minutes');
+        let appendSeconds = document.getElementById('t-seconds');
+        let editbtn = document.getElementById('set-countdown');
+        let resetbtn = document.getElementById('t-reset');
+        let startbtn = document.getElementById('t-start');
+        let stopbtn = document.getElementById('t-stop');
+        let up = document.querySelector('.up');
+        let Interval;
+
+        startbtn.onclick = function(){
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 1000)
+            up.style.display = "block";
+        }
+        resetbtn.onclick = function(){
+            clearInterval(Interval);
+            up.style.display = "none";
+            seconds = 0;
+            minutes = 0;
+            appendSeconds.innerHTML = "0" + seconds;
+            appendMinutes.innerHTML = "0" + minutes;
+        }
+        stopbtn.onclick = function(){
+            clearInterval(Interval);
+        }
+
+        function startTimer(){
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            if(seconds > 9){
+                appendSeconds.innerHTML = seconds;
+            }
+            if(seconds >= 60){
+                minutes++;
+                appendMinutes.innerHTML = "0" + minutes;
+                seconds = 0;
+                appendSeconds.innerHTML = "0" + seconds;
+            }
+            if(minutes > 9){
+                appendMinutes.innerHTML = minutes;
+            }
+        }
+       }
+    </script>
 </body>
 </html>

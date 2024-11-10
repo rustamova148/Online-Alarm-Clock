@@ -1,0 +1,16 @@
+.timer-box{
+    position: relative;
+    width: 200px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 170px;
+    left: 450px;
+}
+.up{
+    position: absolute;
+    left: 63px;
+}
