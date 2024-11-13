@@ -32,6 +32,7 @@
     margin: 0 auto;
     padding-top: 25px;
     padding-right: 15px;
+    padding-left: 20px;
     animation: editmove 0.3s forwards;
 }
 @keyframes editmove {
@@ -42,4 +43,48 @@
     color: rgb(236, 235, 235);
     font-size: 20px;
     float: inline-end;
+}
+.edit-time{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.edit-sound{
+    margin-bottom: 40px;
+}
+.time-box{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.edit-title{
+    margin-bottom: 40px;
+}
+.edit-btns{
+    margin-top: 40px;
+}
+.edit-btns button{
+    padding: 7px 14px;
+}
+#hoursselect,
+#minutesselect,
+#secondsselect{
+    width: 120px;
+    padding: 4px;
+    outline: none;
+}
+#soundselect{
+    width: 200px;
+    padding: 4px;
+    outline: none;
+}
+#edit-title{
+    width: 190px;
+    padding: 4px;
+    outline: none;
+}
+label{
+    color: rgb(248, 246, 246);
+    font-size: 17px;
 }

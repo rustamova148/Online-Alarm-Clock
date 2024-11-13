@@ -19,20 +19,27 @@
                 <div class="edit-box">
                     <i class="fa-solid fa-xmark closebtn"></i>
                     <div class="edit-time">
+                        <div class="time-box">
                         <label for="hoursselect">Hours</label>
                         <select id="hoursselect">
                         <option value="00">00</option>
                         </select>
+                        </div>
+                        <div class="time-box">
                         <label for="minutesselect">Minutes</label>
                         <select id="minutesselect">
                         <option value="00">00</option>
                         </select>
+                        </div>
+                        <div class="time-box">
                         <label for="secondsselect">Seconds</label>
                         <select id="secondsselect">
                         <option value="00">00</option>
                         </select>
+                        </div>
                     </div>
                      <div class="edit-sound">
+                        <label for="soundselect">Sound</label><br><br>
                         <select id="soundselect">
                             <option value="paradise">Paradise Island</option>
                             <option value="piano">Piano</option>
@@ -40,12 +47,14 @@
                         </select>
                      </div>
                      <div class="edit-title">
-                        <label for="edit-title">Title</label>
+                        <label for="edit-title">Title</label><br><br>
                         <input type="text" id="edit-title">
                      </div>
                      <hr>
-                     <button>Cancel</button>
-                     <button>Start</button>
+                     <div class="edit-btns">
+                        <button>Cancel</button>
+                        <button>Start</button>
+                     </div>
                 </div>
             </div>
             <button id="t-reset">Reset</button>
