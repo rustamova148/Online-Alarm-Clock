@@ -15,6 +15,39 @@
         </p>
         <div class="timer-btns">
             <button id="set-countdown">Edit Timer</button>
+            <div id="countdown-box">
+                <div class="edit-box">
+                    <i class="fa-solid fa-xmark closebtn"></i>
+                    <div class="edit-time">
+                        <label for="hoursselect">Hours</label>
+                        <select id="hoursselect">
+                        <option value="00">00</option>
+                        </select>
+                        <label for="minutesselect">Minutes</label>
+                        <select id="minutesselect">
+                        <option value="00">00</option>
+                        </select>
+                        <label for="secondsselect">Seconds</label>
+                        <select id="secondsselect">
+                        <option value="00">00</option>
+                        </select>
+                    </div>
+                     <div class="edit-sound">
+                        <select id="soundselect">
+                            <option value="paradise">Paradise Island</option>
+                            <option value="piano">Piano</option>
+                            <option value="classic">Classic</option>
+                        </select>
+                     </div>
+                     <div class="edit-title">
+                        <label for="edit-title">Title</label>
+                        <input type="text" id="edit-title">
+                     </div>
+                     <hr>
+                     <button>Cancel</button>
+                     <button>Start</button>
+                </div>
+            </div>
             <button id="t-reset">Reset</button>
             <button id="t-start">Start</button>
             <button id="t-stop">Stop</button>
@@ -26,7 +59,6 @@
         let seconds = 0;
         let appendMinutes = document.getElementById('t-minutes');
         let appendSeconds = document.getElementById('t-seconds');
-        let editbtn = document.getElementById('set-countdown');
         let resetbtn = document.getElementById('t-reset');
         let startbtn = document.getElementById('t-start');
         let stopbtn = document.getElementById('t-stop');
@@ -66,6 +98,66 @@
                 appendMinutes.innerHTML = minutes;
             }
         }
+       }
+       let editbtn = document.getElementById('set-countdown');
+       let modal = document.getElementById('countdown-box');
+       let closebtn = document.querySelector('.closebtn');
+       let hoursselect = document.getElementById('hoursselect');
+       let minutesselect = document.getElementById('minutesselect');
+       let secondsselect = document.getElementById('secondsselect');
+
+       editbtn.onclick = function(){
+        if(modal.style.display == 'none'){
+            modal.style.display = 'block';
+        }else{
+            modal.style.display = 'none';
+        }
+       }
+
+       closebtn.onclick = function(){
+        modal.style.display = 'none';
+       }
+
+       window.onclick = function(event){
+        if(event.target == modal){
+            modal.style.display = 'none';
+        }
+       }
+
+       for(let i = 0; i < 100; i++){
+        const option1 = document.createElement('option');
+        if(i < 10){
+            option1.value = "0" + i;
+            option1.textContent = "0" + i;
+        }else{
+            option1.value = i;
+            option1.textContent = i
+        }
+        hoursselect.appendChild(option1);
+       }
+
+       for(let i = 0; i < 60; i++){
+        const option2 = document.createElement('option');
+        if(i < 10){
+            option2.value = "0" + i;
+            option2.textContent = "0" + i;
+        }else{
+            option2.value = i;
+            option2.textContent = i
+        }
+        minutesselect.appendChild(option2);
+       }
+
+       for(let i = 0; i < 60; i++){
+        const option3 = document.createElement('option');
+        if(i < 10){
+            option3.value = "0" + i;
+            option3.textContent = "0" + i;
+        }else{
+            option3.value = i;
+            option3.textContent = i
+        }
+        secondsselect.appendChild(option3);
        }
     </script>
 </body>

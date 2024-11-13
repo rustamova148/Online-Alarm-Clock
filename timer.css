@@ -14,3 +14,32 @@
     position: absolute;
     left: 63px;
 }
+#countdown-box{
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    top: -180px;
+    left: -500px;
+    width: 1300px;
+    height: 100vh;
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.edit-box{
+    background-color: #5F5F5F;
+    width: 400px;
+    height: 523px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-right: 15px;
+    animation: editmove 0.3s forwards;
+}
+@keyframes editmove {
+    from{margin-top: -200px;}
+    to{margin-top: 0}
+}
+.closebtn{
+    color: rgb(236, 235, 235);
+    font-size: 20px;
+    float: inline-end;
+}
