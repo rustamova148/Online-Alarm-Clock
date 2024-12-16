@@ -42,7 +42,7 @@
     padding-right: 15px;
     padding-left: 20px;
     animation: editmove 0.3s forwards;
-    margin-left: 620px;
+    /* margin-left: 620px; */
 }
 @keyframes editmove {
     from{margin-top: -200px;}
