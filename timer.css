@@ -40,9 +40,7 @@
     width: 40%;
     min-height: 70vh;
     margin: 0 auto;
-    padding-top: 25px;
-    padding-right: 15px;
-    padding-left: 20px;
+    padding: 25px 15px 20px 20px;
     animation: editmove 0.3s forwards;
 }
 @keyframes editmove {
