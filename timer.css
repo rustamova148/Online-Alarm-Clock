@@ -1,25 +1,33 @@
 .timer-box{
-    position: relative;
-    width: 200px;
-    min-height: 70px;
+    width: 500px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 170px;
-    left: 450px;
+    top: 220px;
+    left: 570px;
 }
-.up{
-    position: absolute;
-    left: 63px;
+@font-face {
+    font-family: 'Digital7';
+    src: url('./digital-7\ \(mono\ italic\).ttf');
+}
+#main-watch{
+    font-family: 'Digital7', sans-serif;
+    font-weight: 500;
+    font-size: 120px;
+    margin: 0;
+}
+#fortitle{
+    font-size: 26px;
 }
 #countdown-box{
     background-color: rgb(0, 0, 0, 0.4);
     position: absolute;
-    top: -180px;
-    left: -500px;
-    width: 1300px;
+    top: -232px;
+    left: -649px;
+    width: 1664px;
     height: 100vh;
     display: none;
     cursor: pointer;
@@ -27,13 +35,14 @@
 }
 .edit-box{
     background-color: #5F5F5F;
-    width: 400px;
+    width: 470px;
     height: 523px;
     margin: 0 auto;
     padding-top: 25px;
     padding-right: 15px;
     padding-left: 20px;
     animation: editmove 0.3s forwards;
+    margin-left: 620px;
 }
 @keyframes editmove {
     from{margin-top: -200px;}
@@ -87,4 +96,38 @@
 label{
     color: rgb(248, 246, 246);
     font-size: 17px;
+}
+button{
+    color: white;
+    padding: 10px 25px;
+    font-size: 18px;
+}
+#t-start{
+    background-color: #4AAE71;
+    border: 1px solid #4AAE71;
+}
+#t-reset{
+    background-color: #FBAD10;
+    border: 1px solid #FBAD10;
+}
+#t-stop{
+    background-color: #EF6262;
+    border: 1px solid #EF6262;
+}
+#set-countdown{
+    background-color: #0090DD;
+    border: 1px solid #0090DD;
+}
+#edit-start{
+    background-color: #4AAE71;
+    border: 1px solid #4AAE71;
+    padding: 10px 25px;
+    font-size: 18px;
+}
+#edit-cancel{
+    background-color: #ffffff;
+    border: 1px solid #979997;
+    color: #686b68;
+    padding: 10px 25px;
+    font-size: 18px;
 }
