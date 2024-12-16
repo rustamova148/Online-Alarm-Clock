@@ -94,7 +94,7 @@ let secondsselect = document.getElementById("secondsselect");
 
 editbtn.onclick = function () {
   if (modal.style.display == "none") {
-    modal.style.display = "block";
+    modal.style.display = "flex";
   } else {
     modal.style.display = "none";
   }

@@ -28,8 +28,10 @@
     top: -4px;
     left: -80px;
     width: 105%;
-    height: 100.5vh;
+    height: 100vh;
     display: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     z-index: 1;
 }
