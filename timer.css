@@ -37,14 +37,13 @@
 }
 .edit-box{
     background-color: #5F5F5F;
-    width: 35%;
-    height: 70vh;
+    width: 40%;
+    min-height: 70vh;
     margin: 0 auto;
     padding-top: 25px;
     padding-right: 15px;
     padding-left: 20px;
     animation: editmove 0.3s forwards;
-    /* margin-left: 620px; */
 }
 @keyframes editmove {
     from{margin-top: -200px;}
