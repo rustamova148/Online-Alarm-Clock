@@ -27,16 +27,16 @@
     position: absolute;
     top: -4px;
     left: -80px;
-    width: 1664px;
-    height: 100vh;
+    width: 105%;
+    height: 100.5vh;
     display: none;
     cursor: pointer;
     z-index: 1;
 }
 .edit-box{
     background-color: #5F5F5F;
-    width: 470px;
-    height: 523px;
+    width: 35%;
+    height: 70vh;
     margin: 0 auto;
     padding-top: 25px;
     padding-right: 15px;
