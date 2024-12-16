@@ -1,6 +1,7 @@
 *
 {
     margin: 0px;
+    padding: 0px;
 }
 
 @keyframes fadeBtn 
@@ -20,7 +21,7 @@ body
     top: 80px;
     left: 100px;
     height: 90.5vh;
-    width: 94.5%;
+    width: 93.9%;
     background-color: antiquewhite;
 }
 
@@ -66,8 +67,8 @@ body
 
 #leftNav
 {
-    left:0px;
-    height:91.2vh;
+    left: 0px;
+    height: 91.2vh;
     width: 100px;
     background-color:#3d3c3c;
 }

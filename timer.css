@@ -1,13 +1,13 @@
 .timer-box{
-    width: 500px;
-    height: 100px;
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute;
     top: 220px;
-    left: 570px;
+    left: 570px; */
 }
 @font-face {
     font-family: 'Digital7';
