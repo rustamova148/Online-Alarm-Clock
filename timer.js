@@ -11,33 +11,22 @@ let appendHours = document.getElementById("t-hours");
 let appendMinutes = document.getElementById("t-minutes");
 let appendSeconds = document.getElementById("t-seconds");
 let resetbtn = document.getElementById("t-reset");
-let startbtn = document.getElementById("t-start");
 let editstart = document.getElementById("edit-start");
-let stopbtn = document.getElementById("t-stop");
 let edittitle = document.getElementById("edit-title");
 let fortitle = document.getElementById("fortitle");
 let Interval;
-// let up = document.querySelector('.up');
+
 fortitle.style.display = "none";
-startbtn.onclick = function () {
-  clearInterval(Interval);
-  Interval = setInterval(startTimer, 1000);
-  // up.style.display = "block";
-};
 
 resetbtn.onclick = function () {
   clearInterval(Interval);
-  // up.style.display = "none";
+
   hours = 0;
   seconds = 0;
   minutes = 0;
   appendHours.innerHTML = "0" + hours;
   appendSeconds.innerHTML = "0" + seconds;
   appendMinutes.innerHTML = "0" + minutes;
-};
-
-stopbtn.onclick = function () {
-  clearInterval(Interval);
 };
 
 editstart.onclick = function () {
@@ -50,6 +39,9 @@ editstart.onclick = function () {
   modal.style.display = "none";
   fortitle.innerText = edittitle.value;
   selectedSound = document.getElementById("soundselect").value;
+
+  clearInterval(Interval);
+  Interval = setInterval(startTimer, 1000);
 };
 
 function startTimer() {
