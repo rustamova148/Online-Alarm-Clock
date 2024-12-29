@@ -23,6 +23,7 @@ body
     height: 100vh;
     width: calc(100% - 100px);
     background-color: antiquewhite;
+    border: none;
 }
 
 #topNav
@@ -71,6 +72,7 @@ body
     height: 100vh;
     width: 100px;
     background-color:#3d3c3c;
+    border: none;
 }
 
 .Btn
