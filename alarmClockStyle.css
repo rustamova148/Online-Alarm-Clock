@@ -15,7 +15,7 @@ body
     box-shadow: -2px 4px 29px 12px rgba(0,0,0,0.51);
     border-radius: 20px;
     width: 97%;
-    height: 75vh;
+    min-height: 75vh;
 }
 
 .label

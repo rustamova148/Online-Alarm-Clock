@@ -20,7 +20,7 @@ body
     position: absolute;
     top: 80px;
     left: 100px;
-    height: 90vh;
+    min-height: 100vh;
     width: calc(100% - 100px);
     background-color: antiquewhite;
     border: none;
@@ -69,7 +69,7 @@ body
 #leftNav
 {
     left: 0px;
-    height: 90vh;
+    min-height: 100vh;
     width: 100px;
     background-color:#3d3c3c;
     border: none;
