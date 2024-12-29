@@ -6,9 +6,9 @@ function showTime()
     let seconds = date.getSeconds(); //0 - 59
     let session = "AM";
 
-    let day = date.getUTCDate(); //01 - 31
-    let month = date.getUTCMonth() + 1; // 01 - 12
-    let year = date.getUTCFullYear(); // ???? 😅
+    let day = date.getUTCDate();
+    let month = date.getUTCMonth() + 1; 
+    let year = date.getUTCFullYear(); 
     let dayName = date.toLocaleString('en-us' ,{weekday:'long'});
 
     if(hours == 0)
@@ -26,9 +26,9 @@ function showTime()
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    var timegeneral = hours + "." + minutes + ":" + seconds + " " + session;
+    let timegeneral = hours + "." + minutes + ":" + seconds + " " + session;
 
-    var dategeneral = day + "/" + month + "/" + year + " " + dayName; 
+    let dategeneral = day + "/" + month + "/" + year + " " + dayName; 
 
 
     document.getElementById("time").innerText = timegeneral;
